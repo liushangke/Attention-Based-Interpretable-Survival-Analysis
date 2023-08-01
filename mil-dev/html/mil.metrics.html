@@ -1,0 +1,754 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>mil.metrics package &#8212; mil 0 documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">mil 0 documentation</p>
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="mil.io.html">
+   mil.io package
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   mil.metrics package
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mil.models.html">
+   mil.models package
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-mil.metrics.metrics">
+   mil.metrics.metrics module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-mil.metrics">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="mil-metrics-package">
+<h1>mil.metrics package<a class="headerlink" href="#mil-metrics-package" title="Permalink to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="module-mil.metrics.metrics">
+<span id="mil-metrics-metrics-module"></span><h2>mil.metrics.metrics module<a class="headerlink" href="#module-mil.metrics.metrics" title="Permalink to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.metrics.Balanced">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.metrics.</span></span><span class="sig-name descname"><span class="pre">Balanced</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.Balanced" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mil.metrics.metrics.ThresholdMetric" title="mil.metrics.metrics.ThresholdMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThresholdMetric</span></code></a></p>
+<p>A stateful metric class for binary balanced accuracy.</p>
+<p>This metric can be used as a stateless callable <cite>Balanced()(y_true, y_pred)</cite>,
+or as a stateful metric that aggregates results over multiple calls to
+<cite>update_state(y_true, y_pred)</cite> The current state can be acquired using <cite>result()</cite>,
+and the state can be reset using <cite>reset_state()</cite>. The balanced accuracy is
+the weighted average of sensitivity and specificity:</p>
+<div class="math notranslate nohighlight">
+\[Balanced = \frac{1}{2} \left( \frac{TP}{TP+FN} + \frac{TN}{TN+FP} \right)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>balanced</strong> – The balanced accuracy. Range [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.metrics.Balanced.result">
+<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.Balanced.result" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes and returns the scalar metric value tensor or a dict of scalars.</p>
+<p>Result computation is an idempotent operation that simply calculates the
+metric value using the state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A scalar tensor, or a dictionary of scalar tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.metrics.F1">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.metrics.</span></span><span class="sig-name descname"><span class="pre">F1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.F1" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mil.metrics.metrics.ThresholdMetric" title="mil.metrics.metrics.ThresholdMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThresholdMetric</span></code></a></p>
+<p>A stateful metric class for F1 score.</p>
+<p>This metric can be used as a stateless callable <cite>F1()(y_true, y_pred)</cite>,
+or as a stateful metric that aggregates results over multiple calls to
+<cite>update_state(y_true, y_pred)</cite>. The current state can be acquired using <cite>result()</cite>,
+and the state can be reset using reset_state(). The F1 score is defined as:</p>
+<div class="math notranslate nohighlight">
+\[F1 = \frac{TP}{TP + \frac{1}{2} \left( FP + FN \right)}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>f1</strong> – The F1 score. Range [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.metrics.F1.result">
+<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.F1.result" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes and returns the scalar metric value tensor or a dict of scalars.</p>
+<p>Result computation is an idempotent operation that simply calculates the
+metric value using the state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A scalar tensor, or a dictionary of scalar tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.metrics.Mcc">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.metrics.</span></span><span class="sig-name descname"><span class="pre">Mcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.Mcc" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mil.metrics.metrics.ThresholdMetric" title="mil.metrics.metrics.ThresholdMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThresholdMetric</span></code></a></p>
+<p>A stateful metric class for binary Matthews’ correlation coefficient.</p>
+<p>This metric can be used as a stateless callable <cite>Mcc()(y_true, y_pred)</cite>,
+or as a stateful metric that aggregates results over multiple calls to
+<cite>update_state(y_true, y_pred)</cite>. The current state can be acquired using <cite>result()</cite>,
+and the state can be reset using <cite>reset_state()</cite>. Matthew’s correlation
+coefficient is defined as:</p>
+<div class="math notranslate nohighlight">
+\[MCC = \frac{(TP \cdot TN) - (FP \cdot FN)}{\sqrt{(TP + FP)(TP+FN)(TN+FP)(TN+FN)}}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mcc</strong> – The Matthew’s correlation coefficient. Range [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.metrics.Mcc.result">
+<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.Mcc.result" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes and returns the scalar metric value tensor or a dict of scalars.</p>
+<p>Result computation is an idempotent operation that simply calculates the
+metric value using the state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A scalar tensor, or a dictionary of scalar tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.metrics.Sensitivity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.metrics.</span></span><span class="sig-name descname"><span class="pre">Sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.Sensitivity" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mil.metrics.metrics.ThresholdMetric" title="mil.metrics.metrics.ThresholdMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThresholdMetric</span></code></a></p>
+<p>A stateful metric class for sensitivity.</p>
+<p>This metric can be used as a stateless callable <cite>Sensitivity()(y_true, y_pred)</cite>,
+or as a stateful metric that aggregates results over multiple calls to
+<cite>update_state(y_true, y_pred)</cite>. The current state can be acquired using <cite>result()</cite>,
+and the state can be reset using <cite>reset_state()</cite>. Sensitivity is defined as:</p>
+<div class="math notranslate nohighlight">
+\[Sensitivity = \frac{TP}{TP+FN}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sensitivity</strong> – The sensitivity. Range [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.metrics.Sensitivity.result">
+<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.Sensitivity.result" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes and returns the scalar metric value tensor or a dict of scalars.</p>
+<p>Result computation is an idempotent operation that simply calculates the
+metric value using the state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A scalar tensor, or a dictionary of scalar tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.metrics.Specificity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.metrics.</span></span><span class="sig-name descname"><span class="pre">Specificity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.Specificity" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mil.metrics.metrics.ThresholdMetric" title="mil.metrics.metrics.ThresholdMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThresholdMetric</span></code></a></p>
+<p>A stateful metric class for specificity.</p>
+<p>This metric can be used as a stateless callable <cite>Specificity()(y_true, y_pred)</cite>,
+or as a stateful metric that aggregates results over multiple calls to
+<cite>update_state(y_true, y_pred)</cite>. The current state can be acquired using <cite>result()</cite>,
+and the state can be reset using <cite>reset_state()</cite>. Specificity is defined as:</p>
+<div class="math notranslate nohighlight">
+\[Specificity = \frac{TN}{TN+FP}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>specificity</strong> – The specificity. Range [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.metrics.Specificity.result">
+<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.Specificity.result" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes and returns the scalar metric value tensor or a dict of scalars.</p>
+<p>Result computation is an idempotent operation that simply calculates the
+metric value using the state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A scalar tensor, or a dictionary of scalar tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.metrics.ThresholdMetric">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.metrics.</span></span><span class="sig-name descname"><span class="pre">ThresholdMetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.ThresholdMetric" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Metric</span></code></p>
+<p>A generic binary classification metric class.</p>
+<p>This is subclassed by BalancedAccracy, F1, Mcc, Sensitivity, and Specificity
+metrics. It maintains a state of TP/FP/TN/FN that are used to calculate
+the aforementioned metrics. This is initialized with a single scalar threshold
+in the range [0,1] to transform predictions into binary labels. Sample weights
+are not currently supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mil.metrics.metrics.ThresholdMetric.tp">
+<span class="sig-name descname"><span class="pre">tp</span></span><a class="headerlink" href="#mil.metrics.metrics.ThresholdMetric.tp" title="Permalink to this definition">#</a></dt>
+<dd><p>Running count of the true positives.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mil.metrics.metrics.ThresholdMetric.fp">
+<span class="sig-name descname"><span class="pre">fp</span></span><a class="headerlink" href="#mil.metrics.metrics.ThresholdMetric.fp" title="Permalink to this definition">#</a></dt>
+<dd><p>Running count of the false positives.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mil.metrics.metrics.ThresholdMetric.tn">
+<span class="sig-name descname"><span class="pre">tn</span></span><a class="headerlink" href="#mil.metrics.metrics.ThresholdMetric.tn" title="Permalink to this definition">#</a></dt>
+<dd><p>Running count of the true negatives.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mil.metrics.metrics.ThresholdMetric.fn">
+<span class="sig-name descname"><span class="pre">fn</span></span><a class="headerlink" href="#mil.metrics.metrics.ThresholdMetric.fn" title="Permalink to this definition">#</a></dt>
+<dd><p>Running count of the false negatives.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.metrics.ThresholdMetric.reset_state">
+<span class="sig-name descname"><span class="pre">reset_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.ThresholdMetric.reset_state" title="Permalink to this definition">#</a></dt>
+<dd><p>Resets all of the metric state variables.</p>
+<p>This function is called between epochs/steps,
+when a metric is evaluated during training.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.metrics.ThresholdMetric.update_state">
+<span class="sig-name descname"><span class="pre">update_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.metrics.ThresholdMetric.update_state" title="Permalink to this definition">#</a></dt>
+<dd><p>Updates metric state containing comprised of TP/FP/TN/FN.</p>
+<p>Accepts as input labels <cite>y_true</cite> and predictions <cite>y_pred</cite>. Sample weights are
+not currently supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_pred</strong> (<em>float</em>) – A two-dimensional float tensor containing predictions. If one column,
+<cite>y_pred</cite> is assumed to contain positive class predictions. If two
+columns, <cite>y_pred</cite> is assumed to contain one-hot encoded predictions.</p></li>
+<li><p><strong>y_true</strong> (<em>float</em>) – A two-dimensional float tensor containing ground truth labels. If one
+column, <cite>y_pred</cite> is assumed to contain positive class predictions. If
+two columns, <cite>y_pred</cite> is assumed to contain one-hot encoded predictions.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-mil.metrics">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-mil.metrics" title="Permalink to this heading">#</a></h2>
+<p>This subpackage contains functions for evaluating model performance</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.Balanced">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.</span></span><span class="sig-name descname"><span class="pre">Balanced</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.Balanced" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mil.metrics.metrics.ThresholdMetric" title="mil.metrics.metrics.ThresholdMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThresholdMetric</span></code></a></p>
+<p>A stateful metric class for binary balanced accuracy.</p>
+<p>This metric can be used as a stateless callable <cite>Balanced()(y_true, y_pred)</cite>,
+or as a stateful metric that aggregates results over multiple calls to
+<cite>update_state(y_true, y_pred)</cite> The current state can be acquired using <cite>result()</cite>,
+and the state can be reset using <cite>reset_state()</cite>. The balanced accuracy is
+the weighted average of sensitivity and specificity:</p>
+<div class="math notranslate nohighlight">
+\[Balanced = \frac{1}{2} \left( \frac{TP}{TP+FN} + \frac{TN}{TN+FP} \right)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>balanced</strong> – The balanced accuracy. Range [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.Balanced.result">
+<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.Balanced.result" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes and returns the scalar metric value tensor or a dict of scalars.</p>
+<p>Result computation is an idempotent operation that simply calculates the
+metric value using the state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A scalar tensor, or a dictionary of scalar tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.F1">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.</span></span><span class="sig-name descname"><span class="pre">F1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.F1" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mil.metrics.metrics.ThresholdMetric" title="mil.metrics.metrics.ThresholdMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThresholdMetric</span></code></a></p>
+<p>A stateful metric class for F1 score.</p>
+<p>This metric can be used as a stateless callable <cite>F1()(y_true, y_pred)</cite>,
+or as a stateful metric that aggregates results over multiple calls to
+<cite>update_state(y_true, y_pred)</cite>. The current state can be acquired using <cite>result()</cite>,
+and the state can be reset using reset_state(). The F1 score is defined as:</p>
+<div class="math notranslate nohighlight">
+\[F1 = \frac{TP}{TP + \frac{1}{2} \left( FP + FN \right)}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>f1</strong> – The F1 score. Range [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.F1.result">
+<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.F1.result" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes and returns the scalar metric value tensor or a dict of scalars.</p>
+<p>Result computation is an idempotent operation that simply calculates the
+metric value using the state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A scalar tensor, or a dictionary of scalar tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.Mcc">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.</span></span><span class="sig-name descname"><span class="pre">Mcc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.Mcc" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mil.metrics.metrics.ThresholdMetric" title="mil.metrics.metrics.ThresholdMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThresholdMetric</span></code></a></p>
+<p>A stateful metric class for binary Matthews’ correlation coefficient.</p>
+<p>This metric can be used as a stateless callable <cite>Mcc()(y_true, y_pred)</cite>,
+or as a stateful metric that aggregates results over multiple calls to
+<cite>update_state(y_true, y_pred)</cite>. The current state can be acquired using <cite>result()</cite>,
+and the state can be reset using <cite>reset_state()</cite>. Matthew’s correlation
+coefficient is defined as:</p>
+<div class="math notranslate nohighlight">
+\[MCC = \frac{(TP \cdot TN) - (FP \cdot FN)}{\sqrt{(TP + FP)(TP+FN)(TN+FP)(TN+FN)}}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mcc</strong> – The Matthew’s correlation coefficient. Range [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.Mcc.result">
+<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.Mcc.result" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes and returns the scalar metric value tensor or a dict of scalars.</p>
+<p>Result computation is an idempotent operation that simply calculates the
+metric value using the state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A scalar tensor, or a dictionary of scalar tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.Sensitivity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.</span></span><span class="sig-name descname"><span class="pre">Sensitivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.Sensitivity" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mil.metrics.metrics.ThresholdMetric" title="mil.metrics.metrics.ThresholdMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThresholdMetric</span></code></a></p>
+<p>A stateful metric class for sensitivity.</p>
+<p>This metric can be used as a stateless callable <cite>Sensitivity()(y_true, y_pred)</cite>,
+or as a stateful metric that aggregates results over multiple calls to
+<cite>update_state(y_true, y_pred)</cite>. The current state can be acquired using <cite>result()</cite>,
+and the state can be reset using <cite>reset_state()</cite>. Sensitivity is defined as:</p>
+<div class="math notranslate nohighlight">
+\[Sensitivity = \frac{TP}{TP+FN}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sensitivity</strong> – The sensitivity. Range [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.Sensitivity.result">
+<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.Sensitivity.result" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes and returns the scalar metric value tensor or a dict of scalars.</p>
+<p>Result computation is an idempotent operation that simply calculates the
+metric value using the state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A scalar tensor, or a dictionary of scalar tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="mil.metrics.Specificity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mil.metrics.</span></span><span class="sig-name descname"><span class="pre">Specificity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.Specificity" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mil.metrics.metrics.ThresholdMetric" title="mil.metrics.metrics.ThresholdMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">ThresholdMetric</span></code></a></p>
+<p>A stateful metric class for specificity.</p>
+<p>This metric can be used as a stateless callable <cite>Specificity()(y_true, y_pred)</cite>,
+or as a stateful metric that aggregates results over multiple calls to
+<cite>update_state(y_true, y_pred)</cite>. The current state can be acquired using <cite>result()</cite>,
+and the state can be reset using <cite>reset_state()</cite>. Specificity is defined as:</p>
+<div class="math notranslate nohighlight">
+\[Specificity = \frac{TN}{TN+FP}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold</strong> (<em>float</em>) – A single float threshold in [0,1] used to determine the truth value
+of the predictions.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the class instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>specificity</strong> – The specificity. Range [0, 1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="mil.metrics.Specificity.result">
+<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mil.metrics.Specificity.result" title="Permalink to this definition">#</a></dt>
+<dd><p>Computes and returns the scalar metric value tensor or a dict of scalars.</p>
+<p>Result computation is an idempotent operation that simply calculates the
+metric value using the state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A scalar tensor, or a dictionary of scalar tensors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2022, Lee Cooper.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+  </body>
+</html>

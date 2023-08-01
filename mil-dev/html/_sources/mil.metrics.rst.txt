@@ -1,0 +1,21 @@
+mil.metrics package
+===================
+
+Submodules
+----------
+
+mil.metrics.metrics module
+--------------------------
+
+.. automodule:: mil.metrics.metrics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: mil.metrics
+   :members:
+   :undoc-members:
+   :show-inheritance:

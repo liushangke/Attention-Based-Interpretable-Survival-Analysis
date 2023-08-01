@@ -1,0 +1,85 @@
+version: 2.1
+commands:
+  coverage:
+    description: "Upload coverage"
+    steps:
+      - run:
+          name: Install Codecov client
+          command: pip install codecov==2.1.9
+      - run:
+          name: Upload coverage
+          command: for i in $(seq 1 10); do [ $i -gt 1 ] && echo "retrying $i" && sleep 5; codecov --required --disable search --file ~/project/.tox/coverage/coverage.xml && s=0 && break || s=$?; done; (exit $s)
+jobs:
+  test_py37:
+    working_directory: ~/project
+    docker:
+      - image: cimg/python:3.7
+    steps:
+      - checkout
+      - run:
+          name: Testing python 3.7
+          command: |
+            pip install --upgrade pip
+            pip install --user tox
+            tox -e py37,report
+      - coverage
+  test_py38:
+    working_directory: ~/project
+    docker:
+      - image: cimg/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Testing python 3.8
+          command: |
+            pip install --upgrade pip
+            pip install --user tox
+            tox -e py38,report
+      - coverage
+  test_py39:
+    working_directory: ~/project
+    docker:
+      - image: cimg/python:3.9
+    steps:
+      - checkout
+      - run:
+          name: Testing python 3.9
+          command: |
+            pip install --upgrade pip
+            pip install --user tox
+            tox -e py39,report
+      - coverage
+  test_py310:
+    working_directory: ~/project
+    docker:
+      - image: cimg/python:3.10
+    steps:
+      - checkout
+      - run:
+          name: Testing python 3.10
+          command: |
+            pip install --upgrade pip
+            pip install --user tox
+            tox -e py310,report
+      - coverage
+  lint:
+    working_directory: ~/project
+    docker:
+      - image: cimg/python:3.9
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            pip install --upgrade pip
+            pip install --user tox
+            tox -e lint
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test_py37
+      - test_py38
+      - test_py39
+      - test_py310
+      - lint

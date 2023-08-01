@@ -1,0 +1,53 @@
+mil.io package
+==============
+
+Submodules
+----------
+
+mil.io.dataset module
+---------------------
+
+.. automodule:: mil.io.dataset
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mil.io.reader module
+--------------------
+
+.. automodule:: mil.io.reader
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mil.io.transforms module
+------------------------
+
+.. automodule:: mil.io.transforms
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mil.io.utils module
+-------------------
+
+.. automodule:: mil.io.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mil.io.writer module
+--------------------
+
+.. automodule:: mil.io.writer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: mil.io
+   :members:
+   :undoc-members:
+   :show-inheritance:

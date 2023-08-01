@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>mil.io package &#8212; mil 0 documentation</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
+
+    </div>
+
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">mil 0 documentation</p>
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   mil.io package
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mil.metrics.html">
+   mil.metrics package
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mil.models.html">
+   mil.models package
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submodules">
+   Submodules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-mil.io.dataset">
+   mil.io.dataset module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-mil.io.reader">
+   mil.io.reader module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-mil.io.transforms">
+   mil.io.transforms module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-mil.io.utils">
+   mil.io.utils module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-mil.io.writer">
+   mil.io.writer module
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-mil.io">
+   Module contents
+  </a>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
+  <section id="mil-io-package">
+<h1>mil.io package<a class="headerlink" href="#mil-io-package" title="Permalink to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="module-mil.io.dataset">
+<span id="mil-io-dataset-module"></span><h2>mil.io.dataset module<a class="headerlink" href="#module-mil.io.dataset" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.dataset.mil_datagen">
+<span class="sig-prename descclassname"><span class="pre">mil.io.dataset.</span></span><span class="sig-name descname"><span class="pre">mil_datagen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">structured</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.dataset.mil_datagen" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.dataset.threshold">
+<span class="sig-prename descclassname"><span class="pre">mil.io.dataset.</span></span><span class="sig-name descname"><span class="pre">threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key='t'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cond=&lt;function</span> <span class="pre">&lt;lambda&gt;&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.dataset.threshold" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-mil.io.reader">
+<span id="mil-io-reader-module"></span><h2>mil.io.reader module<a class="headerlink" href="#module-mil.io.reader" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.reader.peek">
+<span class="sig-prename descclassname"><span class="pre">mil.io.reader.</span></span><span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serialized</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.reader.peek" title="Permalink to this definition">#</a></dt>
+<dd><p>Retrieve the variable names and types stored in the serialized contents of
+a .tfr file.</p>
+<p>The return value of peek is required to read .tfr files with TFRecordDataset
+in graph mode. Peek must be called in Eager mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serialized</strong> (<em>bytes</em>) – The serialized contents of a .tfr file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>variables</strong> – Key value pairs descibing the names and types (int64_list,
+float_list, byte_list) of all variables stored in the .tfr file.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.reader.read_record">
+<span class="sig-prename descclassname"><span class="pre">mil.io.reader.</span></span><span class="sig-name descname"><span class="pre">read_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serialized</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">structured</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.reader.read_record" title="Permalink to this definition">#</a></dt>
+<dd><p>Reads the contents of a .tfr and returns features, labels, and slide and tile metadata.
+Features can be read in either structured or flattened format, regardless of the format they
+were stored in. Format conversion adds some overhead.
+:param serialized: The serialized contents of a .tfr file.
+:type serialized: bytes
+:param variables: Key value pairs descibing the names and types (int64_list,</p>
+<blockquote>
+<div><p>float_list, byte_list) of all variables stored in the .tfr file.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>structured</strong> (<em>bool</em>) – Flag indicating whether to read features in structured (True)
+or flattened (False) format. Default value is True.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>features</strong> (<em>float</em>) – A structured ([m, n, D]) or flattened ([m*n, D]) tensor containing
+D-dimensional features for m*n instances.</p></li>
+<li><p><strong>labels</strong> (<em>dict</em>) – A dictionary containing user-provided metadata that was stored in the
+.tfr file.</p></li>
+<li><p><strong>slide_metadata</strong> (<em>dict</em>) – A dictionary containing standardized slide metadata produced by histomics_stream.</p></li>
+<li><p><strong>tile_metadata</strong> (<em>dict</em>) – A dictionary containing standardized tile metadata produced by histomics_stream..</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-mil.io.transforms">
+<span id="mil-io-transforms-module"></span><h2>mil.io.transforms module<a class="headerlink" href="#module-mil.io.transforms" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.transforms.flatten">
+<span class="sig-prename descclassname"><span class="pre">mil.io.transforms.</span></span><span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">structured</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.transforms.flatten" title="Permalink to this definition">#</a></dt>
+<dd><p>Flattens a structured feature array.
+This transforms an [m, n, D] structured tensor of m*n instances each with
+D features into an [m*n, D] flattened tensor. The order of the rows of the
+flattened tensor depend on their ordering in x, which is not assumed to
+follow any order.
+:param structured: An [m, n, D] structured tensor containing m * n instances each with D features.
+:type structured: float
+:param x: The (x, y) coordinates (pixels) of the upper left corner of each tile</p>
+<blockquote>
+<div><p>in the whole slide image.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The tile sizes (pixels).</p></li>
+<li><p><strong>overlap</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The tile overlaps (pixels).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>flattened</strong> – An [m * n, D] flattened tensor with rows in order determined by x.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.transforms.parallel_dataset">
+<span class="sig-prename descclassname"><span class="pre">mil.io.transforms.</span></span><span class="sig-name descname"><span class="pre">parallel_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dense_dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">structured</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.transforms.parallel_dataset" title="Permalink to this definition">#</a></dt>
+<dd><p>Generates a ragged dataset to support multi-GPU training.
+Flattened and structured datasets have variable dimensions that change with
+slide dimensions and/or masking. Multi-GPU training requires creating batches
+that are ragged along these variable dimensions. This function performs
+this ragged transformation and sets shapes to ensure compatibility with keras
+models. A ragged batched dataset is returned.
+:param dense_dataset: An unbatched dataset of dense tensors and labels.
+:type dense_dataset: tf.data.Dataset
+:param D: The number of features per instance. This is used to define shape[-1]</p>
+<blockquote>
+<div><p>of the tensors in dense_dataset. The shape setting operations cannot
+infer this at runtime in graph mode, so it must be provided.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>devices</strong> (<em>int</em>) – The number of devices to use in parallel training. Required for batching.</p></li>
+<li><p><strong>structured</strong> (<em>bool</em>) – Flag indicating whether to read features in structured (True)
+or flattened (False) format. Default value is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>parallel_dataset</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tf.data.Dataset</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>dense_dataset should have len(dense_dataset.element_spec) &gt; 1.</p>
+<p>Since partial batches are discarded, the input dataset should be shuffled
+to avoid discarding the same samples each epoch.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.transforms.structure">
+<span class="sig-prename descclassname"><span class="pre">mil.io.transforms.</span></span><span class="sig-name descname"><span class="pre">structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flattened</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.transforms.structure" title="Permalink to this definition">#</a></dt>
+<dd><p>Structure a flattened feature array.
+This transforms an [m*n, D] flattened tensor of m*n instances each with
+D features into an [m, n, D] structured tensor, where instances are organized
+as found in the whole slide image. These positions are calculated using the
+tile sizes, tile overlaps, and pixel coordinates of each tile/instance. Instances
+of the structured tensor that are not defined in x are filled with zeros to
+produce a dense result.
+:param flattened: An [m*n, D] structured tensor containing m * n instances each with D features.
+:type flattened: float
+:param x: The (x, y) coordinates (pixels) of the upper left corner of each tile in the</p>
+<blockquote>
+<div><p>whole slide image.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The tile sizes (pixels).</p></li>
+<li><p><strong>overlap</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The tile overlaps (pixels).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>structured</strong> – An [m, n, D] structured tensor.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-mil.io.utils">
+<span id="mil-io-utils-module"></span><h2>mil.io.utils module<a class="headerlink" href="#module-mil.io.utils" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.utils.inference">
+<span class="sig-prename descclassname"><span class="pre">mil.io.utils.</span></span><span class="sig-name descname"><span class="pre">inference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">study</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefetch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.utils.inference" title="Permalink to this definition">#</a></dt>
+<dd><p>Applies a model to a histomics_stream study, returning the extracted
+features and tile_info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>tf.keras.Model</em>) – The model to use for extracting features from tiles.</p></li>
+<li><p><strong>study</strong> (<em>object</em>) – A histomics_stream study object containing the slides defined in paths, and analysis
+plan defined by tile size, tile overlap, and magnification/reading parameters.</p></li>
+<li><p><strong>batch</strong> (<em>int</em><em>, </em><em>default 128</em>) – The number of tiles to process in a batch.</p></li>
+<li><p><strong>prefetch</strong> (<em>int</em><em>, </em><em>default 2</em>) – The number of batches to prefetch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>features</strong> (<em>float</em>) – A two-dimensional feature tensor produced by histomics_stream with instances in rows.</p></li>
+<li><p><strong>tile_info</strong> (<em>dict</em>) – A dictionary of file, magnification, and position data for each tile produced
+by histomics_stream.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.utils.study">
+<span class="sig-prename descclassname"><span class="pre">mil.io.utils.</span></span><span class="sig-name descname"><span class="pre">study</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(224,</span> <span class="pre">224)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1792,</span> <span class="pre">1792)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'exact'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.utils.study" title="Permalink to this definition">#</a></dt>
+<dd><p>Generate a histomics stream study for one of more slides from a single subject.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>paths</strong> (<em>list</em><em>(</em><em>string</em><em>)</em>) – A list of filenames and paths for whole-slide images to include in the histomics_stream study.</p></li>
+<li><p><strong>t</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The height and width (pixels) of the tiles used for analysis at target magnification. Default
+value is (224, 224).</p></li>
+<li><p><strong>overlap</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The vertical and horizontal overlap (pixels) between tiles. Default value is (0, 0).</p></li>
+<li><p><strong>chunk</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The size of a region to retrieve from the slide at the target magnification. histomics_stream
+groups the reading of tiles into multi-tile chunks to minimize overhead. Default value is
+(1792, 1792).</p></li>
+<li><p><strong>target</strong> (<em>float</em>) – The target magnification to return tiles at. If this magnification is not available, histomics_stream
+will read the next highest magnification and resize to obtain the desired magnification. Default
+value is 20 to analyze at 20X objective magnification.</p></li>
+<li><p><strong>source</strong> (<em>string</em>) – A histomics_stream parameter defining read and resizing behavior. Default value exact returns the
+exact magnification requested, using resizing if necessary. See histomics_stream documentation
+for more details.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>study</strong> – A histomics_stream study object containing the slides defined in paths, and analysis
+plan defined by tile size, tile overlap, and magnification/reading parameters.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-mil.io.writer">
+<span id="mil-io-writer-module"></span><h2>mil.io.writer module<a class="headerlink" href="#module-mil.io.writer" title="Permalink to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.writer.inference_metadata">
+<span class="sig-prename descclassname"><span class="pre">mil.io.writer.</span></span><span class="sig-name descname"><span class="pre">inference_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tile_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.writer.inference_metadata" title="Permalink to this definition">#</a></dt>
+<dd><p>Extracts slide and tile metadata from the inference result of a histomics_stream study.</p>
+<p>histomics_stream produces a dictionary describing the tiles generated
+from the whole slide image. This function parses this data to extract and standardize
+information for storage in a .tfr file. This information includes slide filenames, slide
+groupings, scan magnification, magnification for reading tiles, resized tile magnification,
+tile size, tile overlap, and tile position information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tile_info</strong> (<em>dict</em>) – A dictionary of file, magnification, and position data for each tile produced
+by histomics_stream.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>slide_metadata</strong> (<em>dict</em>) – A dict describing the names, groupings, and scan, read, and analysis magnification
+for each slide in the inference result, as well as the tile size and tile overlap
+used for analysis. See .tfr dataset format documentation for details.</p></li>
+<li><p><strong>tile_metadata</strong> (<em>dict</em>) – A dict describing the position of each tile in the whole-slide image at the analysis
+magnification. See .tfr dataset format documentation for details.</p></li>
+<li><p><strong>slide_index</strong> (<em>int</em>) – A 1d tensor containing the slide index for each tile. See .tfr dataset format
+documentation for details.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.writer.split_inference">
+<span class="sig-prename descclassname"><span class="pre">mil.io.writer.</span></span><span class="sig-name descname"><span class="pre">split_inference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.writer.split_inference" title="Permalink to this definition">#</a></dt>
+<dd><p>Splits an inference result containing multiple slides into single-slide
+inference results.</p>
+<p>The inference result from a histomics_stream dataset may contain instances
+from multiple slides. This function splits the features and tile_info
+of a mixed inference result into individual inference results for each slide.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>features</strong> (<em>float</em>) – A two-dimensional feature tensor produced by histomics_stream with instances in rows.</p></li>
+<li><p><strong>tile_info</strong> (<em>dict</em>) – A dictionary of file, magnification, and position data for each tile produced
+by histomics_stream.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>features</strong> (<em>list(float)</em>) – A list of feature tensors, one for each slide.</p></li>
+<li><p><strong>tile_info</strong> (<em>list(dict)</em>) – A list of tile_info dictionaries, one for each slide.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.writer.write_record">
+<span class="sig-prename descclassname"><span class="pre">mil.io.writer.</span></span><span class="sig-name descname"><span class="pre">write_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">structured</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.writer.write_record" title="Permalink to this definition">#</a></dt>
+<dd><p>Writes a tfrecord (.tfr) file from the inference results of a histomics stream study.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>string</em>) – Path and filename for the generated .tfr file.</p></li>
+<li><p><strong>features</strong> (<em>float</em>) – A two-dimensional feature tensor produced by histomics_stream with instances in rows.</p></li>
+<li><p><strong>tile_info</strong> (<em>dict</em>) – A dictionary of file, magnification, and position data for each tile produced
+by histomics_stream.</p></li>
+<li><p><strong>labels</strong> (<em>dict</em>) – Dictionary containing user-provided labels and metadata for inclusion in the .tfr file.
+Values can be scalars of types in variable_type_list, a list of these scalars, or a 1d
+or 0d numpy.ndarray of the numpy types in variable_type_list. 2d ndarray, nested lists, or
+dicts are not supported. Strings are converted to byte automatically.</p></li>
+<li><p><strong>structured</strong> (<em>bool</em>) – Flag indicating whether to read features in structured (True)
+or flattened (False) format. Default value is True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-mil.io">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-mil.io" title="Permalink to this heading">#</a></h2>
+<p>This subpackage contains functions for reading and writing data</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.flatten">
+<span class="sig-prename descclassname"><span class="pre">mil.io.</span></span><span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">structured</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.flatten" title="Permalink to this definition">#</a></dt>
+<dd><p>Flattens a structured feature array.
+This transforms an [m, n, D] structured tensor of m*n instances each with
+D features into an [m*n, D] flattened tensor. The order of the rows of the
+flattened tensor depend on their ordering in x, which is not assumed to
+follow any order.
+:param structured: An [m, n, D] structured tensor containing m * n instances each with D features.
+:type structured: float
+:param x: The (x, y) coordinates (pixels) of the upper left corner of each tile</p>
+<blockquote>
+<div><p>in the whole slide image.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The tile sizes (pixels).</p></li>
+<li><p><strong>overlap</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The tile overlaps (pixels).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>flattened</strong> – An [m * n, D] flattened tensor with rows in order determined by x.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.inference">
+<span class="sig-prename descclassname"><span class="pre">mil.io.</span></span><span class="sig-name descname"><span class="pre">inference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">study</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">128</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefetch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.inference" title="Permalink to this definition">#</a></dt>
+<dd><p>Applies a model to a histomics_stream study, returning the extracted
+features and tile_info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>tf.keras.Model</em>) – The model to use for extracting features from tiles.</p></li>
+<li><p><strong>study</strong> (<em>object</em>) – A histomics_stream study object containing the slides defined in paths, and analysis
+plan defined by tile size, tile overlap, and magnification/reading parameters.</p></li>
+<li><p><strong>batch</strong> (<em>int</em><em>, </em><em>default 128</em>) – The number of tiles to process in a batch.</p></li>
+<li><p><strong>prefetch</strong> (<em>int</em><em>, </em><em>default 2</em>) – The number of batches to prefetch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>features</strong> (<em>float</em>) – A two-dimensional feature tensor produced by histomics_stream with instances in rows.</p></li>
+<li><p><strong>tile_info</strong> (<em>dict</em>) – A dictionary of file, magnification, and position data for each tile produced
+by histomics_stream.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.parallel_dataset">
+<span class="sig-prename descclassname"><span class="pre">mil.io.</span></span><span class="sig-name descname"><span class="pre">parallel_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dense_dataset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">devices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">structured</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.parallel_dataset" title="Permalink to this definition">#</a></dt>
+<dd><p>Generates a ragged dataset to support multi-GPU training.
+Flattened and structured datasets have variable dimensions that change with
+slide dimensions and/or masking. Multi-GPU training requires creating batches
+that are ragged along these variable dimensions. This function performs
+this ragged transformation and sets shapes to ensure compatibility with keras
+models. A ragged batched dataset is returned.
+:param dense_dataset: An unbatched dataset of dense tensors and labels.
+:type dense_dataset: tf.data.Dataset
+:param D: The number of features per instance. This is used to define shape[-1]</p>
+<blockquote>
+<div><p>of the tensors in dense_dataset. The shape setting operations cannot
+infer this at runtime in graph mode, so it must be provided.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>devices</strong> (<em>int</em>) – The number of devices to use in parallel training. Required for batching.</p></li>
+<li><p><strong>structured</strong> (<em>bool</em>) – Flag indicating whether to read features in structured (True)
+or flattened (False) format. Default value is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>parallel_dataset</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tf.data.Dataset</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>dense_dataset should have len(dense_dataset.element_spec) &gt; 1.</p>
+<p>Since partial batches are discarded, the input dataset should be shuffled
+to avoid discarding the same samples each epoch.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.peek">
+<span class="sig-prename descclassname"><span class="pre">mil.io.</span></span><span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serialized</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.peek" title="Permalink to this definition">#</a></dt>
+<dd><p>Retrieve the variable names and types stored in the serialized contents of
+a .tfr file.</p>
+<p>The return value of peek is required to read .tfr files with TFRecordDataset
+in graph mode. Peek must be called in Eager mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serialized</strong> (<em>bytes</em>) – The serialized contents of a .tfr file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>variables</strong> – Key value pairs descibing the names and types (int64_list,
+float_list, byte_list) of all variables stored in the .tfr file.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.read_record">
+<span class="sig-prename descclassname"><span class="pre">mil.io.</span></span><span class="sig-name descname"><span class="pre">read_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">serialized</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">structured</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.read_record" title="Permalink to this definition">#</a></dt>
+<dd><p>Reads the contents of a .tfr and returns features, labels, and slide and tile metadata.
+Features can be read in either structured or flattened format, regardless of the format they
+were stored in. Format conversion adds some overhead.
+:param serialized: The serialized contents of a .tfr file.
+:type serialized: bytes
+:param variables: Key value pairs descibing the names and types (int64_list,</p>
+<blockquote>
+<div><p>float_list, byte_list) of all variables stored in the .tfr file.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>structured</strong> (<em>bool</em>) – Flag indicating whether to read features in structured (True)
+or flattened (False) format. Default value is True.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>features</strong> (<em>float</em>) – A structured ([m, n, D]) or flattened ([m*n, D]) tensor containing
+D-dimensional features for m*n instances.</p></li>
+<li><p><strong>labels</strong> (<em>dict</em>) – A dictionary containing user-provided metadata that was stored in the
+.tfr file.</p></li>
+<li><p><strong>slide_metadata</strong> (<em>dict</em>) – A dictionary containing standardized slide metadata produced by histomics_stream.</p></li>
+<li><p><strong>tile_metadata</strong> (<em>dict</em>) – A dictionary containing standardized tile metadata produced by histomics_stream..</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.split_inference">
+<span class="sig-prename descclassname"><span class="pre">mil.io.</span></span><span class="sig-name descname"><span class="pre">split_inference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.split_inference" title="Permalink to this definition">#</a></dt>
+<dd><p>Splits an inference result containing multiple slides into single-slide
+inference results.</p>
+<p>The inference result from a histomics_stream dataset may contain instances
+from multiple slides. This function splits the features and tile_info
+of a mixed inference result into individual inference results for each slide.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>features</strong> (<em>float</em>) – A two-dimensional feature tensor produced by histomics_stream with instances in rows.</p></li>
+<li><p><strong>tile_info</strong> (<em>dict</em>) – A dictionary of file, magnification, and position data for each tile produced
+by histomics_stream.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>features</strong> (<em>list(float)</em>) – A list of feature tensors, one for each slide.</p></li>
+<li><p><strong>tile_info</strong> (<em>list(dict)</em>) – A list of tile_info dictionaries, one for each slide.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.structure">
+<span class="sig-prename descclassname"><span class="pre">mil.io.</span></span><span class="sig-name descname"><span class="pre">structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flattened</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.structure" title="Permalink to this definition">#</a></dt>
+<dd><p>Structure a flattened feature array.
+This transforms an [m*n, D] flattened tensor of m*n instances each with
+D features into an [m, n, D] structured tensor, where instances are organized
+as found in the whole slide image. These positions are calculated using the
+tile sizes, tile overlaps, and pixel coordinates of each tile/instance. Instances
+of the structured tensor that are not defined in x are filled with zeros to
+produce a dense result.
+:param flattened: An [m*n, D] structured tensor containing m * n instances each with D features.
+:type flattened: float
+:param x: The (x, y) coordinates (pixels) of the upper left corner of each tile in the</p>
+<blockquote>
+<div><p>whole slide image.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The tile sizes (pixels).</p></li>
+<li><p><strong>overlap</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The tile overlaps (pixels).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>structured</strong> – An [m, n, D] structured tensor.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.study">
+<span class="sig-prename descclassname"><span class="pre">mil.io.</span></span><span class="sig-name descname"><span class="pre">study</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(224,</span> <span class="pre">224)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1792,</span> <span class="pre">1792)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'exact'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.study" title="Permalink to this definition">#</a></dt>
+<dd><p>Generate a histomics stream study for one of more slides from a single subject.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>paths</strong> (<em>list</em><em>(</em><em>string</em><em>)</em>) – A list of filenames and paths for whole-slide images to include in the histomics_stream study.</p></li>
+<li><p><strong>t</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The height and width (pixels) of the tiles used for analysis at target magnification. Default
+value is (224, 224).</p></li>
+<li><p><strong>overlap</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The vertical and horizontal overlap (pixels) between tiles. Default value is (0, 0).</p></li>
+<li><p><strong>chunk</strong> (<em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em>) – The size of a region to retrieve from the slide at the target magnification. histomics_stream
+groups the reading of tiles into multi-tile chunks to minimize overhead. Default value is
+(1792, 1792).</p></li>
+<li><p><strong>target</strong> (<em>float</em>) – The target magnification to return tiles at. If this magnification is not available, histomics_stream
+will read the next highest magnification and resize to obtain the desired magnification. Default
+value is 20 to analyze at 20X objective magnification.</p></li>
+<li><p><strong>source</strong> (<em>string</em>) – A histomics_stream parameter defining read and resizing behavior. Default value exact returns the
+exact magnification requested, using resizing if necessary. See histomics_stream documentation
+for more details.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>study</strong> – A histomics_stream study object containing the slides defined in paths, and analysis
+plan defined by tile size, tile overlap, and magnification/reading parameters.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mil.io.write_record">
+<span class="sig-prename descclassname"><span class="pre">mil.io.</span></span><span class="sig-name descname"><span class="pre">write_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tile_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">structured</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mil.io.write_record" title="Permalink to this definition">#</a></dt>
+<dd><p>Writes a tfrecord (.tfr) file from the inference results of a histomics stream study.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>string</em>) – Path and filename for the generated .tfr file.</p></li>
+<li><p><strong>features</strong> (<em>float</em>) – A two-dimensional feature tensor produced by histomics_stream with instances in rows.</p></li>
+<li><p><strong>tile_info</strong> (<em>dict</em>) – A dictionary of file, magnification, and position data for each tile produced
+by histomics_stream.</p></li>
+<li><p><strong>labels</strong> (<em>dict</em>) – Dictionary containing user-provided labels and metadata for inclusion in the .tfr file.
+Values can be scalars of types in variable_type_list, a list of these scalars, or a 1d
+or 0d numpy.ndarray of the numpy types in variable_type_list. 2d ndarray, nested lists, or
+dicts are not supported. Strings are converted to byte automatically.</p></li>
+<li><p><strong>structured</strong> (<em>bool</em>) – Flag indicating whether to read features in structured (True)
+or flattened (False) format. Default value is True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              </footer>
+              
+          </div>
+          
+      </div>
+    </div>
+
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2022, Lee Cooper.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2.<br>
+</p>
+  </div>
+  
+</div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+codecov:
+  token: 0c6f469b-7b77-4b9a-80f0-d8f3d88edaf8
+  require_ci_to_pass: yes
+  notify:
+    wait_for_ci: yes
+
+comment:
+  layout: "reach, diff, flags, files"
+  behavior: default
+  require_changes: true
+
+coverage:
+  precision: 2
+  round: down
+  range: "70...100"
+  
+  status:
+    # blocks pull requests that don't meet minimum criteria
+    project:
+      default:
+        target: auto #measure coverage relative to pr base coverage, not absolute
+        threshold: 5% #5 percent slip relative to pr base coverage acceptable
+        # advanced settings
+        branches: 
+          - master
+          - dev
+        if_ci_failed: error #throw error if ci fails
+        only_pulls: true #do not post status for commits that are not on a pr
+        
+    # applied to the changed code only
+    patch:
+      default:
+        threshold: 50
+        only_pulls: true
